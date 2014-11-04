@@ -27,16 +27,17 @@ numGaussUBM=400
 numLeavesSGMM=7000
 numGaussSGMM=9000
 
-feats_nj=10
-train_nj=30
-decode_nj=5
+feats_nj=6
+train_nj=6
+decode_nj=6
 
 echo ============================================================================
 echo "                Data & Lexicon & Language Preparation                     "
 echo ============================================================================
 
 #timit=/export/corpora5/LDC/LDC93S1/timit/TIMIT # @JHU
-timit=/mnt/matylda2/data/TIMIT/timit # @BUT
+#timit=/mnt/matylda2/data/TIMIT/timit # @BUT
+timit=/home/jch/data/timit/TIMIT/
 
 local/timit_data_prep.sh $timit || exit 1
 
